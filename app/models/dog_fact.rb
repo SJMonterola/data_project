@@ -1,0 +1,2 @@
+class DogFact < ApplicationRecord
+end
