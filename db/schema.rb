@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_17_010307) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_18_020238) do
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.string "biography"
@@ -19,18 +19,23 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_17_010307) do
   end
 
   create_table "cat_facts", force: :cascade do |t|
-    t.string "name"
-    t.date "date_published"
     t.string "cat_fact"
+    t.date "date_published"
+    t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_cat_facts_on_author_id"
   end
 
   create_table "dog_facts", force: :cascade do |t|
-    t.string "name"
-    t.date "date_published"
     t.string "dog_fact"
+    t.date "date_published"
+    t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_dog_facts_on_author_id"
   end
+
+  add_foreign_key "cat_facts", "authors"
+  add_foreign_key "dog_facts", "authors"
 end
