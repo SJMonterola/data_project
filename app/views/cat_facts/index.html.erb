@@ -1,1 +1,6 @@
 <h1>All Cat Facts</h1>
+<ol>
+  <% @cat_facts.each do |cat_fact| %>
+    <li><%= link_to cat_fact.cat_fact, cat_fact%></li>
+  <% end %>
+</ol>

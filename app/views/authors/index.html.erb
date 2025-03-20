@@ -1,1 +1,6 @@
-<h1>All Authors</h1>
+<h1>All Contributors</h1>
+<ol>
+  <% @authors.each do |author| %>
+    <li><%= link_to author.name, author %></li>
+  <% end %>
+</ol>

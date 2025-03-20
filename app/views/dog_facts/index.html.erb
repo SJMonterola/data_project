@@ -1,1 +1,6 @@
 <h1>All Dog Facts</h1>
+<ol>
+  <% @dog_facts.each do |dog_fact| %>
+    <li><%= link_to dog_fact.dog_fact, dog_fact %></li>
+  <% end %>
+</ol>
