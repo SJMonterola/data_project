@@ -1,4 +1,22 @@
-<h1 class="title is-1"><%= @author.name %></h1>
+<h1 class="title is-3"><%= @author.name %></h1>
+
 <div>
-  <p><%= @author.biography %></p>
+  <p>
+    <strong>Biography: </strong>
+    <%= @author.biography %>
+  </p>
+</div>
+
+<div class="content mt-6">
+  <h1 class="title is-4">
+    <strong>Contributions</strong>
+  </h1>
+  <ul>
+    <% @author.cat_facts.each do |cat_fact| %>
+      <li><%= link_to cat_fact.cat_fact, cat_fact %></li>
+    <% end %>
+    <% @author.dog_facts.each do |dog_fact| %>
+      <li><%= link_to dog_fact.dog_fact, dog_fact %></li>
+    <% end %>
+  </ul>
 </div>

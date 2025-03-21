@@ -1,5 +1,10 @@
-<h1><%= @dog_fact.dog_fact %></h1>
+<h1 class="title is-4"><%= @dog_fact.dog_fact %></h1>
+
 <div>
-  <p>-<%= @dog_fact.author.name %></p>
-  <p>Published <%= @dog_fact.date_published %></p>
+  <p>
+    <strong>Written by <%= link_to @dog_fact.author.name, @dog_fact.author %></strong>
+  </p>
+  <p>
+    <strong>Published <%= @dog_fact.date_published %></strong>
+  </p>
 </div>
