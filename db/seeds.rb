@@ -43,8 +43,8 @@ data_facts.each do |data_fact|
   dogfact = factapi_fetch(dogfact_url())
   author = Author.create(
     name: Faker::Name.name,
-    biography: "A #{Faker::Job.employment_type} #{Faker::Job.title} who loves to " +
-    "#{Faker::Hobby} in their spare time."
+    biography: "A #{Faker::Job.employment_type.downcase} #{Faker::Job.title.downcase} who loves " +
+    "#{Faker::Hobby.activity.downcase} in their spare time."
   )
 
   CatFact.create!(
