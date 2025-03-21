@@ -1,6 +1,6 @@
 class DogFactsController < ApplicationController
   def index
-    @dog_facts = DogFact.inludes(:author).order("date_published DESC")
+    @dog_facts = DogFact.includes(:author).order("date_published DESC")
   end
 
   def show

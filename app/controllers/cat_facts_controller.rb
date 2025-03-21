@@ -1,6 +1,6 @@
 class CatFactsController < ApplicationController
   def index
-    @cat_facts = CatFact.inludes(:author).order("date_published DESC")
+    @cat_facts = CatFact.includes(:author).order("date_published DESC")
   end
 
   def show
