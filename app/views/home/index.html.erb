@@ -1,2 +1,37 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= content_for(:html_title) {"Cat & Dog Fact Archive"} %>
+
+<h1 class="title is-1">Cat & Dog Fact Archive</h1>
+
+<div>
+  <p>
+    <strong>Heres a random cat fact:</strong>
+  </p>
+  <p>
+    <strong><%= @cat_fact.cat_fact %></strong>
+  </p>
+  <p>View more</p>
+</div>
+
+<div class="mt-5">
+  <p>
+    <strong>Heres a random dog fact:</strong>
+  </p>
+  <p>
+    <strong><%= @dog_fact.dog_fact %></strong>
+  </p>
+  <p> View more</p>
+</div>
+
+<div>
+  <h2 class="title is-3 mt-5">About us</h2>
+  <p>Welcome to the Cat & Dog Fact Archive! This site aims to provide random facts</p>
+  <p>about cats and dogs that come from two different API's. All of the facts found on</p>
+  <p>this website come from a <a href="https://github.com/wh-iterabb-it/meowfacts">cat API</a>
+   and a <a href="https://dogapi.dog/">dog API</a>. The authors under each fact are</p>
+  <p>randomly generated names from the <a href="https://github.com/faker-ruby/faker/blob/main/doc/default/name.md">
+    Faker Gem</a> to simulate authors for these facts.</p>
+  <p>The data displayed is contained within three different database tables, the Author </p>
+  <p>table, Cat Fact table, and Dog Fact table. Between both fact tables and the Author</p>
+  <p>table is a one to many association so that the author names may be used within </p>
+  <p>those tables.</p>
+</div>
