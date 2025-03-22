@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "home/index"
+  root to: "home#index"
   resources :authors, only: [ :index, :show ]
   resources :cat_facts, only: [ :index, :show ]
   resources :dog_facts, only: [ :index, :show ]
