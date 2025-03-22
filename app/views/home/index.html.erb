@@ -2,27 +2,27 @@
 
 <h1 class="title is-1">Cat & Dog Fact Archive</h1>
 
-<div>
+<div class="column">
   <p>
     <strong>Heres a random cat fact:</strong>
   </p>
   <p>
     <strong><%= @cat_fact.cat_fact %></strong>
   </p>
-  <p>View more</p>
+  <p><%= link_to "View More", @cat_fact %></p>
 </div>
 
-<div class="mt-5">
+<div class="column mt-5">
   <p>
     <strong>Heres a random dog fact:</strong>
   </p>
   <p>
     <strong><%= @dog_fact.dog_fact %></strong>
   </p>
-  <p> View more</p>
+  <p><%= link_to "View More", @dog_fact %></p>
 </div>
 
-<div>
+<div class="column">
   <h2 class="title is-3 mt-5">About us</h2>
   <p>Welcome to the Cat & Dog Fact Archive! This site aims to provide random facts</p>
   <p>about cats and dogs that come from two different API's. All of the facts found on</p>
