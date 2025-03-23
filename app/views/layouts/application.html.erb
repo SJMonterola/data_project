@@ -29,13 +29,11 @@
       <section class="section">
         <div class="container">
           <nav class="navbar">
-            <div class="navbar-menu columns">
-              <p class="navbar-item column"><%= link_to "Home", root_path %></p>
-              <p class="navbar-item column"><%= link_to "All Contributors", authors_path %></p>
-              <p class="navbar-item column"><%= link_to "All Cat Facts", cat_facts_path %></p>
-              <p class="navbar-item column"><%= link_to "All Dog Facts", dog_facts_path %></p>
-              <input class="input is-info is-normal column is-one-third" type="text"
-                placeholder="Search for a contributor's name, cat fact, or dog fact"/>
+            <div class="navbar-menu">
+              <p class="navbar-item"><%= link_to "Home", root_path %></p>
+              <p class="navbar-item"><%= link_to "All Contributors", authors_path %></p>
+              <p class="navbar-item"><%= link_to "All Cat Facts", cat_facts_path %></p>
+              <p class="navbar-item"><%= link_to "All Dog Facts", dog_facts_path %></p>
             </div>
           </nav>
           <%= yield %>

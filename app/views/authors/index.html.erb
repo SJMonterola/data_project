@@ -1,15 +1,18 @@
-<%= content_for(:html_title) {"All Contributors"} %>
+<!DOCTYPE html>
+<html lang="en">
+  <%= content_for(:html_title) {"All Contributors"} %>
 
-<h1 class="title is-1">All Contributors</h1>
+  <h1 class="title is-1">All Contributors</h1>
 
-<div>
-  <ol>
-    <% @authors.each do |author| %>
-      <li class="mt-6"><%= link_to author.name, author %></li>
-    <% end %>
-  </ol>
-</div>
+  <div>
+    <ol>
+      <% @authors.each do |author| %>
+        <li class="mt-6"><%= link_to author.name, author %></li>
+      <% end %>
+    </ol>
+  </div>
 
-<div class="mt-6">
-  <%= paginate @authors %>
-</div>
+  <div class="mt-6">
+    <%= paginate @authors %>
+  </div>
+</html>

@@ -1,15 +1,18 @@
-<%= content_for(:html_title) {"All Cat Facts"} %>
+<!DOCTYPE html>
+<html lang="en">
+  <%= content_for(:html_title) {"All Cat Facts"} %>
 
-<h1 class="title is-1">All Cat Facts</h1>
+  <h1 class="title is-1">All Cat Facts</h1>
 
-<div>
-  <ol>
-    <% @cat_facts.each do |cat_fact| %>
-      <li class="mt-6"><%= link_to cat_fact.cat_fact, cat_fact %></li>
-    <% end %>
-  </ol>
-</div>
+  <div>
+    <ol>
+      <% @cat_facts.each do |cat_fact| %>
+        <li class="mt-6"><%= link_to cat_fact.cat_fact, cat_fact %></li>
+      <% end %>
+    </ol>
+  </div>
 
-<div class="mt-6">
-  <%= paginate @cat_facts %>
-</div>
+  <div class="mt-6">
+    <%= paginate @cat_facts %>
+  </div>
+</html>

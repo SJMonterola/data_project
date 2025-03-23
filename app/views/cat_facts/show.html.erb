@@ -1,12 +1,15 @@
-<%= content_for(:html_title) {"Cat Fact ##{@cat_fact.id}"} %>
+<!DOCTYPE html>
+<html lang="en">
+  <%= content_for(:html_title) {"Cat Fact ##{@cat_fact.id}"} %>
 
-<h1 class="title is-4"><%= @cat_fact.cat_fact %></h1>
+  <h1 class="title is-4"><%= @cat_fact.cat_fact %></h1>
 
-<div>
-  <p>
-    <strong>Written by <%= link_to @cat_fact.author.name, @cat_fact.author %></strong>
-  </p>
-  <p>
-    <strong>Published <%= @cat_fact.date_published %></strong>
-  </p>
-</div>
+  <div>
+    <p>
+      <strong>Written by <%= link_to @cat_fact.author.name, @cat_fact.author %></strong>
+    </p>
+    <p>
+      <strong>Published <%= @cat_fact.date_published %></strong>
+    </p>
+  </div>
+</html>
