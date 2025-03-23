@@ -17,7 +17,7 @@ end
 
 # Cat facts URL
 def catfact_url
-  "https://meowfacts.herokuapp.com/?count=30"
+  "https://meowfacts.herokuapp.com/?count=60"
 end
 
 # Dog facts URL
@@ -31,9 +31,9 @@ end
 catfact = factapi_fetch(catfact_url())
 
 
-# Creating 30 different records for each table
+# Creating different records for each table
 # Range used for the data arrays from the APIs
-data_facts = 0..29
+data_facts = 0..59
 
 # Issues to resolve
 # Find a way to iterate through the author IDs
